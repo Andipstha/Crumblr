@@ -14,21 +14,26 @@
 
       <body>
             <div class="container">
-                  <ul class="nav nav-pills">
-                      <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
-                      </li>
-                      <li class="nav-item">
-                            <a class="nav-link" href="/about">About</a>
-                      </li>
-                      <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                      </li>
-                      <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
-                      </li>
-                  </ul>
-                  <%= yield %>
+
+                  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+                        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                          <span class="fs-4">Crumblr <small>home baked</small></span>
+                        </a>
+
+                        <ul class="nav nav-pills nav justify-content-end">
+                            <li class="nav-item">
+                                  <a class="nav-link" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                  <a class="nav-link" href="/about">About</a>
+                            </li>
+                        </ul>
+                  </header>
+                  <div class="row">
+                        <div class="col-md-6 offset-md-3">
+                              <%= yield %>
+                        </div>
+                  </div>
             </div>
       </body>
 </html>
