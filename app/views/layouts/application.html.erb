@@ -8,11 +8,21 @@
 
             <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
             <%= javascript_importmap_tags %>
+
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
       </head>
 
       <body>
-            <%= link_to "Home", "/"%>
-            <%= link_to "About", "/about"%>
-            <%= yield %>
+            <div class="container">
+                  <ul class="nav">
+                      <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                      </li>
+                      <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                      </li>
+                  </ul>
+                  <%= yield %>
+            </div>
       </body>
 </html>
