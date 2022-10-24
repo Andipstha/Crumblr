@@ -17,6 +17,11 @@
   </div>
 
   <div class="mb-3">
+    <%= form.label :kind, style: "display: block" %>
+    <%= form.select :kind, ["text","image"], {},class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
     <%= form.label :content, style: "display: block" %>
     <%= form.text_area :content, class: 'form-control' %>
   </div>
